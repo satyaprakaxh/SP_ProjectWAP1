@@ -10,9 +10,37 @@
 
   <h1>Lean Bulk Tracker</h1>
 
-  <div class="search-container">
-    <input type="text" id="searchInput" placeholder="Enter food name..." />
-    <button id="searchBtn">Search</button>
+  <div class="controls">
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Enter food name..." />
+      <button id="searchBtn">Search</button>
+    </div>
+
+    <div class="filter-sort">
+      <div class="filter">
+        <h3>Filters:</h3>
+        <label><input type="checkbox" id="highProtein"> High Protein (>20g)</label>
+        <label><input type="checkbox" id="lowCarb"> Low Carb (<20g)</label>
+        <label><input type="checkbox" id="lowCal"> Low Cal (<300)</label>
+      </div>
+
+      <div class="sort">
+        <h3>Sort by:</h3>
+        <select id="sortBy">
+          <option value="description">Name</option>
+          <option value="calories">Calories</option>
+          <option value="protein">Protein</option>
+          <option value="carbs">Carbs</option>
+          <option value="fats">Fats</option>
+        </select>
+        <select id="sortOrder">
+          <option value="asc">Ascending</option>
+          <option value="desc">Descending</option>
+        </select>
+      </div>
+
+      <button id="themeToggle">Toggle Dark Mode</button>
+    </div>
   </div>
 
   <p id="loading" class="hidden">Loading...</p>
